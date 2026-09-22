@@ -1,0 +1,243 @@
+/* ==========================================================================
+   HEADER ISOLADO - LGF CONSULTANT
+   Efeitos Glassmorphism, Neomorfismo e Microinterações
+   ========================================================================== */
+
+.lgf-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 22px 0;
+  background: rgba(8, 13, 26, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Estado quando a página é roladada (Efeito de Vidro Sólido com Brilho Superior) */
+.lgf-header-scrolled {
+  padding: 14px 0;
+  background: rgba(8, 13, 26, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+
+.lgf-header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- LOGO DA MARCA --- */
+.lgf-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.lgf-brand-logo:hover {
+  transform: scale(1.03);
+}
+
+.lgf-brand-logo .brand-text {
+  color: #ffffff;
+}
+
+.lgf-brand-logo .brand-accent {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+/* --- MENU DE NAVEGAÇÃO DESKTOP --- */
+.lgf-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.lgf-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lgf-nav-link {
+  position: relative;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+/* Indicador Iluminado no Hover do Link */
+.lgf-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.8);
+}
+
+.lgf-nav-link:hover {
+  color: #ffffff;
+}
+
+.lgf-nav-link:hover::after {
+  width: 100%;
+}
+
+.lgf-mobile-cta {
+  display: none;
+}
+
+/* --- BOTÃO DE AÇÃO (CTA) --- */
+.lgf-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lgf-btn-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #080d1a !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lgf-btn-header i {
+  font-size: 16px;
+}
+
+.lgf-btn-header:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.45);
+}
+
+/* --- MENU HAMBÚRGUER (MOBILE) --- */
+.lgf-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10001;
+}
+
+.lgf-hamburger .bar {
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.lgf-hamburger.is-open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: #00f2fe;
+}
+
+.lgf-hamburger.is-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.lgf-hamburger.is-open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: #00f2fe;
+}
+
+/* --- ADAPTAÇÃO RESPONSIVA (TABLETS E CELULARES) --- */
+@media (max-width: 992px) {
+  .lgf-btn-desktop {
+    display: none;
+  }
+
+  .lgf-hamburger {
+    display: flex;
+  }
+
+  .lgf-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: rgba(8, 13, 26, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 1px solid rgba(0, 242, 254, 0.2);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .lgf-nav-menu.is-active {
+    right: 0;
+  }
+
+  .lgf-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .lgf-nav-link {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .lgf-mobile-cta {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .lgf-mobile-cta .lgf-btn-header {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    font-size: 15px;
+  }
+}

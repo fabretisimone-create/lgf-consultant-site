@@ -1,0 +1,212 @@
+/* ==========================================================================
+   SOLUTIONS SECTION - LGF CONSULTANT
+   Design Cyber-Tech, Glassmorphism & Hover Neon Glow
+   ========================================================================== */
+
+.lgf-solutions-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #080d1a;
+  overflow: hidden;
+}
+
+/* Efeito de Iluminação de Fundo */
+.solutions-bg-glow {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(127, 0, 255, 0.1) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.solutions-bg-glow-cyan {
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.lgf-solutions-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cabeçalho Padronizado */
+.lgf-solutions-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.lgf-solutions-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 50px;
+  color: #00f2fe;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.lgf-solutions-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.solutions-text-gradient {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lgf-solutions-subtitle {
+  color: #94a3b8;
+  font-size: 16.5px;
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid de Soluções (2x2 ou Responsivo) */
+.lgf-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Cards de Soluções com Glassmorphism */
+.lgf-solution-card {
+  position: relative;
+  background: rgba(11, 19, 41, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 36px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lgf-solution-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 242, 254, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 242, 254, 0.18), 0 0 15px rgba(0, 242, 254, 0.08);
+}
+
+/* Ícone da Solução */
+.solution-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+  transition: all 0.3s ease;
+}
+
+.lgf-solution-card:hover .solution-icon-box {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #080d1a;
+  border-color: transparent;
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+}
+
+/* Título e Conteúdo */
+.solution-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.solution-card-desc {
+  color: #94a3b8;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Lista de Recursos Inclusos */
+.solution-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.solution-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.solution-feature-item i {
+  color: #00f2fe;
+  font-size: 12px;
+}
+
+/* Link Direto do Card */
+.solution-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00f2fe;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.solution-card-link:hover {
+  color: #ffffff;
+  gap: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lgf-solutions-section {
+    padding: 80px 0;
+  }
+  .lgf-solutions-title {
+    font-size: 28px;
+  }
+  .lgf-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+  .lgf-solution-card {
+    padding: 30px 22px;
+  }
+}

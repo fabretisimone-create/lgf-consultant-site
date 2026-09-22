@@ -1,0 +1,290 @@
+/* ==========================================================================
+   OFFER FORM SECTION - LGF CONSULTANT
+   Design Cyber-Tech, Glassmorphic Card, Neon Inputs & Glow
+   ========================================================================== */
+
+.lgf-offer-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #080d1a;
+  border-top: 1px solid rgba(0, 242, 254, 0.12);
+  overflow: hidden;
+}
+
+/* Efeitos de Iluminação Cyber no Fundo */
+.offer-bg-glow-cyan {
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.offer-bg-glow-purple {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(127, 0, 255, 0.12) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.lgf-offer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.lgf-offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Lado Esquerdo: Texto de Valor e Selos de Confiança */
+.lgf-offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 50px;
+  color: #00f2fe;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.lgf-offer-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.offer-text-gradient {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lgf-offer-description {
+  color: #94a3b8;
+  font-size: 16.5px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+/* Selos de Confiança */
+.lgf-trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 14px 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.trust-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.trust-text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.trust-text span {
+  color: #94a3b8;
+  font-size: 12.5px;
+}
+
+/* Lado Direito: Form Card Glassmorphism */
+.lgf-offer-card-wrapper {
+  position: relative;
+}
+
+.offer-card-glow {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #00f2fe, #7f00ff, #4facfe);
+  border-radius: 24px;
+  filter: blur(14px);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.lgf-offer-card-wrapper:hover .offer-card-glow {
+  opacity: 0.75;
+}
+
+.lgf-offer-card {
+  position: relative;
+  background: rgba(11, 19, 41, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 22px;
+  padding: 40px 32px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+.offer-card-header {
+  margin-bottom: 28px;
+}
+
+.offer-card-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.offer-card-header p {
+  font-size: 13.5px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Estilização dos Inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00f2fe;
+  font-size: 15px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  background: rgba(8, 13, 26, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-select option {
+  background: #080d1a;
+  color: #ffffff;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: #00f2fe;
+  background: rgba(8, 13, 26, 0.95);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+.form-input::placeholder {
+  color: #64748b;
+}
+
+/* Botão Enviar Proposta */
+.btn-submit-proposal {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #080d1a;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.35);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit-proposal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.55);
+}
+
+.form-footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.form-footer-note i {
+  color: #10b981;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .lgf-offer-section {
+    padding: 80px 0;
+  }
+  .lgf-offer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .lgf-offer-title {
+    font-size: 30px;
+  }
+  .lgf-offer-card {
+    padding: 30px 20px;
+  }
+}

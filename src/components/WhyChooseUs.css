@@ -1,0 +1,194 @@
+/* ==========================================================================
+   WHY CHOOSE US SECTION - LGF CONSULTANT
+   Design Cyber-Tech com Conectores de Circuito Neon & Glassmorphism
+   ========================================================================== */
+
+.lgf-why-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #0b1329;
+  border-top: 1px solid rgba(0, 242, 254, 0.12);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.12);
+  overflow: hidden;
+}
+
+/* Efeitos de Iluminação Cyber no Fundo */
+.why-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.lgf-why-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cabeçalho da Seção */
+.lgf-why-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.lgf-why-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 50px;
+  color: #00f2fe;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.lgf-why-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.why-text-gradient {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #7f00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lgf-why-subtitle {
+  color: #94a3b8;
+  font-size: 16.5px;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid com Conectores de Circuito */
+.lgf-why-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Cards de Pilar */
+.lgf-why-card {
+  flex: 1;
+  text-align: center;
+  padding: 36px 24px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lgf-why-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 242, 254, 0.6);
+  background: rgba(0, 242, 254, 0.04);
+  box-shadow: 0 18px 40px rgba(0, 242, 254, 0.22), 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+/* Caixa de Ícone Iluminada */
+.why-icon-box {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  border-radius: 18px;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+  transition: all 0.3s ease;
+}
+
+.lgf-why-card:hover .why-icon-box {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #080d1a;
+  border-color: transparent;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
+  transform: scale(1.05);
+}
+
+.lgf-why-card-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.lgf-why-card-desc {
+  color: #94a3b8;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Conectores Visuais de Circuito Cyber */
+.lgf-circuit-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.lgf-circuit-line {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(0, 242, 254, 0.1), #00f2fe, rgba(0, 242, 254, 0.1));
+}
+
+.lgf-circuit-node {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00f2fe;
+  box-shadow: 0 0 12px #00f2fe, 0 0 20px #00f2fe;
+  animation: node-pulse 2s infinite ease-in-out;
+}
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .lgf-why-section {
+    padding: 80px 0;
+  }
+  .lgf-why-title {
+    font-size: 28px;
+  }
+  .lgf-why-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .lgf-circuit-connector {
+    transform: rotate(90deg);
+    margin: -10px 0;
+  }
+}
