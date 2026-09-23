@@ -46,7 +46,7 @@ export default function OfferForm() {
             </h2>
 
             <p className="lgf-offer-description">
-              Preencha os dados ao lado e nossa equipe de engenharia apresentará um plano executivo sob medida para automatizar, proteger e acelerar seu negócio.
+              Preencha os dados ao lado e nossa equipe apresentará um plano executivo sob medida para automatizar, proteger e acelerar seu negócio.
             </p>
 
             {/* Selos de Garantia e Confiança */}
@@ -83,7 +83,7 @@ export default function OfferForm() {
             </div>
           </div>
 
-          {/* Lado Direito: Form Card Glassmorphism */}
+          {/* Lado Direito: Form Card Glassmorphism Compacto */}
           <div className="lgf-offer-card-wrapper">
             <div className="offer-card-glow"></div>
             <div className="lgf-offer-card">
@@ -94,10 +94,13 @@ export default function OfferForm() {
               </div>
 
               <form onSubmit={handleSubmit}>
+                {/* Campo Nome */}
                 <div className="form-group">
                   <label className="form-label">Seu Nome Completo</label>
-                  <div className="input-with-icon">
-                    <i className="fa-solid fa-user input-icon"></i>
+                  <div className="input-group">
+                    <span className="input-group-icon">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
                     <input
                       type="text"
                       name="nome"
@@ -110,10 +113,13 @@ export default function OfferForm() {
                   </div>
                 </div>
 
+                {/* Campo E-mail */}
                 <div className="form-group">
                   <label className="form-label">E-mail Corporativo</label>
-                  <div className="input-with-icon">
-                    <i className="fa-solid fa-envelope input-icon"></i>
+                  <div className="input-group">
+                    <span className="input-group-icon">
+                      <i className="fa-solid fa-envelope"></i>
+                    </span>
                     <input
                       type="email"
                       name="email"
@@ -126,10 +132,13 @@ export default function OfferForm() {
                   </div>
                 </div>
 
+                {/* Campo WhatsApp */}
                 <div className="form-group">
                   <label className="form-label">WhatsApp com DDD</label>
-                  <div className="input-with-icon">
-                    <i className="fa-brands fa-whatsapp input-icon"></i>
+                  <div className="input-group">
+                    <span className="input-group-icon">
+                      <i className="fa-brands fa-whatsapp"></i>
+                    </span>
                     <input
                       type="tel"
                       name="whatsapp"
@@ -142,10 +151,13 @@ export default function OfferForm() {
                   </div>
                 </div>
 
+                {/* Campo Seleção de Necessidade */}
                 <div className="form-group">
                   <label className="form-label">Principal Necessidade</label>
-                  <div className="input-with-icon">
-                    <i className="fa-solid fa-layer-group input-icon"></i>
+                  <div className="input-group">
+                    <span className="input-group-icon">
+                      <i className="fa-solid fa-layer-group"></i>
+                    </span>
                     <select
                       name="necessidade"
                       className="form-select"

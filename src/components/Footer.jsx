@@ -92,10 +92,9 @@ export default function Footer() {
 
         {/* Rodapé Direitos Autorais & Assinatura de Desenvolvimento */}
         <div className="lgf-footer-bottom">
-          <span>&copy; 2026 LGF Consultant. Todos os direitos reservados.</span>
-          <span className="developer-credits">
-            Desenvolvido por <span className="developer-name">by Simone Strutzel Fabreti</span>
-          </span>
+          <p className="lgf-footer-copyright">
+           © 2026 LGF Consultant. Todos os direitos reservados. Desenvolvido por <span className="developer-name">Simone Strutzel Fabreti</span>
+          </p>
         </div>
 
       </div>

@@ -260,3 +260,30 @@
     right: 20px;
   }
 }
+/* Centraliza o bloco no final do footer */
+.lgf-footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Deixa o texto bem pequeno (11px) e centralizado */
+.lgf-footer-copyright {
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* Efeito ciano suave no seu nome */
+.developer-name {
+  color: rgba(0, 242, 254, 0.85);
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.25);
+}

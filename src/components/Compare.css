@@ -1,251 +1,257 @@
 /* ==========================================================================
    COMPARE SECTION - LGF CONSULTANT
-   Design Cyber-Tech, Cards com Vidro Fosco & Glow Neon
+   Design Limpo, Compacto e Cyber-Tech (Destaque Vermelho vs Ciano Neon)
    ========================================================================== */
 
 .lgf-compare-section {
   position: relative;
-  padding: 120px 0;
-  background-color: #0b1329;
-  border-top: 1px solid rgba(0, 242, 254, 0.12);
-  border-bottom: 1px solid rgba(0, 242, 254, 0.12);
+  padding: 80px 0;
+  background-color: #080d1a;
+  border-top: 1px solid rgba(0, 242, 254, 0.1);
   overflow: hidden;
 }
 
-/* Efeito de Iluminação de Fundo */
 .compare-bg-glow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.06) 0%, transparent 70%);
-  filter: blur(90px);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 70%);
+  filter: blur(100px);
   pointer-events: none;
 }
 
 .lgf-compare-container {
-  max-width: 1240px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
   z-index: 2;
 }
 
-/* Cabeçalho da Seção (Alinhado com o design da Hero) */
-.lgf-compare-header {
+/* Cabeçalho Enxuto */
+.compare-header {
   text-align: center;
-  margin-bottom: 60px;
+  max-width: 600px;
+  margin: 0 auto 40px;
 }
 
-.lgf-compare-badge {
+.compare-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 5px 14px;
   background: rgba(0, 242, 254, 0.06);
   border: 1px solid rgba(0, 242, 254, 0.25);
   border-radius: 50px;
   color: #00f2fe;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 16px;
-  backdrop-filter: blur(8px);
+  margin-bottom: 12px;
 }
 
-.lgf-compare-title {
-  font-size: 38px;
+.compare-title {
+  font-size: 30px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.5px;
-  line-height: 1.25;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-.compare-text-gradient {
+.compare-accent {
   background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.lgf-compare-subtitle {
+.compare-subtitle {
+  font-size: 14px;
   color: #94a3b8;
-  font-size: 16.5px;
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* Grid dos Cards Comparativos */
-.lgf-compare-grid {
+/* Grid de Comparação - Limpo e Compacto */
+.compare-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 32px;
-  align-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-/* Estilo Base dos Cards */
-.lgf-compare-card {
+/* Card Base */
+.compare-card {
   position: relative;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 40px 32px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 19, 41, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* CARD 1: Cenário Tradicional (Efeito Hover Vermelho Alerta) */
-.card-danger {
-  border-color: rgba(239, 68, 68, 0.25);
+/* --- CARD TRADICIONAL (EFEITO VERMELHO AO PASSAR O MOUSE) --- */
+.compare-card.traditional {
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.card-danger:hover {
-  transform: translateY(-8px);
-  border-color: rgba(239, 68, 68, 0.65);
-  background: rgba(239, 68, 68, 0.04);
-  box-shadow: 0 15px 35px rgba(239, 68, 68, 0.2), 0 0 15px rgba(239, 68, 68, 0.1);
+.compare-card.traditional:hover {
+  transform: translateY(-4px);
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 12px 28px rgba(239, 68, 68, 0.15);
+  background: rgba(239, 68, 68, 0.03);
 }
 
-.icon-danger-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+.compare-card.traditional .compare-card-title {
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.compare-card.traditional:hover .compare-card-title {
+  color: #f87171;
+}
+
+.compare-card.traditional .compare-item {
+  position: relative;
+  border-left: 2px solid transparent;
+  padding-left: 10px;
+  transition: all 0.25s ease;
+}
+
+.compare-card.traditional:hover .compare-item {
+  border-left-color: rgba(239, 68, 68, 0.6);
+}
+
+.compare-card.traditional .compare-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.3);
   color: #ef4444;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 11px;
+  flex-shrink: 0;
 }
 
-.title-danger {
-  color: #f87171;
+/* --- CARD LGF CONSULTANT (CIANO NEON) --- */
+.compare-card.lgf {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.08);
 }
 
-/* CARD 2: Cenário LGF Consultant (Efeito Hover Ciano Neon Recomendado) */
-.card-success {
-  border-color: rgba(0, 242, 254, 0.35);
-  background: rgba(0, 242, 254, 0.02);
+.compare-card.lgf:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 242, 254, 0.6);
+  box-shadow: 0 14px 32px rgba(0, 242, 254, 0.18);
+  background: rgba(15, 23, 42, 0.95);
 }
 
-.card-success:hover {
-  transform: translateY(-8px);
-  border-color: rgba(0, 242, 254, 0.85);
-  background: rgba(0, 242, 254, 0.05);
-  box-shadow: 0 18px 40px rgba(0, 242, 254, 0.28), 0 0 20px rgba(0, 242, 254, 0.15);
+.compare-card.lgf .compare-card-title {
+  color: #ffffff;
 }
 
-.icon-success-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: rgba(0, 242, 254, 0.1);
-  border: 1px solid rgba(0, 242, 254, 0.4);
+.compare-card-badge {
+  position: absolute;
+  top: -11px;
+  right: 18px;
+  padding: 3px 12px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #080d1a;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.35);
+}
+
+.compare-card.lgf .compare-item {
+  position: relative;
+  border-left: 2px solid transparent;
+  padding-left: 10px;
+  transition: all 0.25s ease;
+}
+
+.compare-card.lgf:hover .compare-item {
+  border-left-color: rgba(0, 242, 254, 0.6);
+}
+
+.compare-card.lgf .compare-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 242, 254, 0.12);
+  border: 1px solid rgba(0, 242, 254, 0.35);
   color: #00f2fe;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-}
-
-.title-success {
-  color: #ffffff;
-}
-
-/* Badge Flutuante "RECOMENDADO" */
-.recommended-badge {
-  position: absolute;
-  top: -14px;
-  right: 28px;
-  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-  color: #080d1a;
   font-size: 11px;
-  font-weight: 800;
-  padding: 5px 16px;
-  border-radius: 50px;
-  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* Cabeçalho do Card */
+.compare-card-header {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.compare-card.lgf .compare-card-header {
+  border-bottom-color: rgba(0, 242, 254, 0.15);
+}
+
+.compare-card-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
   text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+  display: block;
 }
 
-/* Estrutura Interna dos Cards */
-.card-header-top {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
+.compare-card.lgf .compare-card-tag {
+  color: #00f2fe;
 }
 
-.card-header-top h3 {
-  font-size: 21px;
+.compare-card-title {
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.3;
+  margin: 0;
 }
 
+/* Lista de Itens */
 .compare-list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .compare-item {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.compare-item i {
-  font-size: 18px;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.icon-danger-item {
-  color: #ef4444;
-}
-
-.icon-success-item {
-  color: #00f2fe;
-}
-
-.compare-item-content strong {
-  display: block;
-  color: #ffffff;
-  font-size: 15.5px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.compare-item-content p {
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
   color: #94a3b8;
-  font-size: 14px;
-  line-height: 1.55;
-  margin: 0;
 }
 
-/* Responsividade */
+.compare-card.lgf .compare-item {
+  color: #e2e8f0;
+}
+
 @media (max-width: 768px) {
-  .lgf-compare-section {
-    padding: 80px 0;
-  }
-  .lgf-compare-title {
-    font-size: 28px;
-  }
-  .lgf-compare-grid {
+  .compare-grid {
     grid-template-columns: 1fr;
-  }
-  .lgf-compare-card {
-    padding: 30px 22px;
+    gap: 20px;
   }
 }
